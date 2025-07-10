@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers - Just Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+ 
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+    <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+  <!-- Careers Section -->
+ <section class="careers-section">
+  <div class="container">
+    <h2>Careers at Just Care Hospital</h2>
+    <div class="career-instructions">
+  <p>
+    💼 We are currently hiring for the following positions.  
+    <strong>Click on a job title</strong> to learn more and apply online.
+  </p>
+</div>
+
+<div class="filter-controls">
+  <label>
+    <input type="checkbox" id="filterUrgent" />
+    Show 🔔 Urgent Hire Only
+  </label>
+</div>
+
+
+    <ul class="career-list">
+      <li data-status="urgent">
+<a href="careers/apply-receptionist.html">
+  <strong>Receptionist</strong> <span class="badge urgent">🔔 Urgent Hire</span>
+</a>
+
+        Diagnose and treat children’s health issues, advise parents, and ensure childhood wellness. Requires MBBS with MD/DNB in Pediatrics and 2+ years of experience.
+      </li data-status="urgent">
+      <li data-status="urgent">
+        <a href="careers/apply-lab-technician.html">
+  <strong>Lab Technician</strong> <span class="badge new">🚀 New Role</span>
+</a><br />
+        Welcome patients, manage appointments, and handle front desk operations. Excellent communication skills and basic computer knowledge required.
+      </li>
+      <li data-status="urgent">
+        <a href="careers/apply-pediatrician.html">
+  <strong>Pediatrician</strong> <span class="badge closing">🕐 Closing Soon</span>
+</a>
+<br />
+        Collect and process lab samples, manage equipment, and provide accurate reports. Diploma or degree in Lab Technology with 1+ year experience needed.
+      </li>
+    </ul>
+    <p>Send your resume to <a href="mailto:ramakanthckp@gmail.com">ramakanthckp@gmail.com</a> for any queries.</p>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  
+    <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('filterUrgent');
+    const items = document.querySelectorAll('.career-list li');
+
+    toggle.addEventListener('change', () => {
+      items.forEach(item => {
+        const isUrgent = item.dataset.status === 'urgent';
+        item.style.display = toggle.checked && !isUrgent ? 'none' : 'block';
+      });
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

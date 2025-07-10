@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Just Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+
+
+ <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+ <div id="header-placeholder"></div>
+
+
+  <!-- Main Banner -->
+<section class="hero-intro">
+  <div class="container">
+    <h1>Welcome to <span>Just Care Hospital</span></h1>
+    <p>Compassionate care for every generation</p>
+  </div>
+</section>
+
+
+  <!-- Highlights or Services Summary -->
+<!-- Highlights or Services Summary -->
+<section class="highlights">
+  <div class="container">
+    <div class="highlight animate">
+      <div class="icon">🩺</div>
+      <h3>Comprehensive Services</h3>
+      <p>We provide pediatric, general medicine, diagnostics, women’s health, and vaccination services – all integrated under one roof for your convenience.</p>
+    </div>
+
+    <div class="highlight animate">
+      <div class="icon">👨‍⚕️</div>
+      <h3>Experienced Providers</h3>
+      <p>Our medical team includes specialists and primary care doctors with years of experience delivering compassionate, evidence-based care.</p>
+    </div>
+
+    <div class="highlight animate">
+      <div class="icon">📍</div>
+      <h3>Multiple Locations</h3>
+      <p>Access quality care at any of our well-equipped centers in and around Dharmavaram, making healthcare accessible wherever you are.</p>
+    </div>
+  </div>
+</section>
+
+  
+  <section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2 class="section-heading">What Our Patients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>“The doctors here are kind and patient. I felt safe during every visit.”</p>
+        <h4>— Anjali R.</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Clean, modern facilities and the best care for my child!”</p>
+        <h4>— Ramesh K.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appointment" class="appointment-section">
+  <div class="container">
+    <h2 class="section-heading">Book an Appointment</h2>
+    <form action="https://formsubmit.co/ramakanthckp@gmail.com" method="POST" class="appointment-form">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <select name="department" required>
+        <option value="">Choose Department</option>
+        <option>General Medicine</option>
+        <option>Pediatrics</option>
+        <option>Diagnostics</option>
+        <option>Women's Health</option>
+      </select>
+      <textarea name="message" placeholder="Reason for visit / Notes" required></textarea>
+      <button type="submit">Request Appointment</button>
+    </form>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+<div id="footer-placeholder"></div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+  
+  <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  // Animate highlight cards on scroll
+  const cards = document.querySelectorAll('.highlight.animate');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+
+
+
+</body>
+</html>

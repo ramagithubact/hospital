@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHERO - Just Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+<STYLE>
+/* SHERO Program Styling */
+/*
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #fff3f3, #e3f2fd);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeInUp 1s ease;
+}*/
+/*
+.shero-heading {
+  text-align: center;
+  font-size: 40px;
+  color: #d81b60;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #f8bbd0;
+}
+*/
+.container > p {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.shero-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.shero-list li {
+  background: #fce4ec;
+  margin: 15px 0;
+  padding: 20px;
+  border-left: 6px solid #d81b60;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shero-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #f8bbd0;
+}
+
+.shero-list li a {
+  font-size: 20px;
+  color: #880e4f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.shero-list li a:hover {
+  color: #ad1457;
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 40px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  background: #fce4ec;
+}
+
+section h2 {
+  color: #c2185b;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+section .icon {
+  font-size: 28px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shero-heading {
+    font-size: 32px;
+  }
+  section h2 {
+    font-size: 22px;
+  }
+  .shero-list li a {
+    font-size: 18px;
+  }
+}
+
+</STYLE>
+</head>
+<body>
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+    <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+  <main class="container">
+    <h1 class="shero-heading">🌸 SHERO Program</h1>
+
+    <p>Empowering women through health, education, and leadership opportunities.</p>
+
+    <ul class="shero-list">
+      <li>
+        <a href="#support-groups"><strong>Support Groups</strong></a><br />
+        Join community-led support groups for women experiencing health, family, or social challenges.
+      </li>
+      <li>
+        <a href="#wellness-workshops"><strong>Wellness Workshops</strong></a><br />
+        Attend monthly events focusing on women's mental health, nutrition, self-defense, and confidence-building.
+      </li>
+      <li>
+        <a href="#career-mentorship"><strong>Career Mentorship</strong></a><br />
+        Our SHERO mentors guide women interested in pursuing careers in healthcare and leadership.
+      </li>
+      <li>
+        <a href="#outreach-awareness"><strong>Outreach & Awareness</strong></a><br />
+        We organize health camps, awareness drives, and screenings for underserved female populations.
+      </li>
+    </ul>
+
+    <section id="support-groups">
+      <h2><span class="icon">❤️</span>Support Groups</h2>
+      <p>Our support groups offer a safe and nurturing environment where women can connect, share, and heal. Led by trained facilitators, these groups address topics such as domestic violence recovery, single motherhood, financial literacy, and managing chronic illnesses. Participation is free and open to all women in the community.</p>
+    </section>
+
+    <section id="wellness-workshops">
+      <h2><span class="icon">🧘</span>Wellness Workshops</h2>
+      <p>Held monthly at our hospital, these workshops cover a wide range of topics critical to women's well-being. Sessions include yoga and meditation, dietary planning with certified nutritionists, mental health awareness, self-defense training, and self-esteem enhancement. Pre-registration is encouraged as spots are limited.</p>
+    </section>
+
+    <section id="career-mentorship">
+      <h2><span class="icon">🎓</span>Career Mentorship</h2>
+      <p>The SHERO Mentorship Initiative connects aspiring women professionals with experienced mentors in healthcare, science, and public service. Whether you're pursuing nursing, hospital administration, or medical research, we help you navigate education, training, and job opportunities. Personalized guidance and networking sessions are part of the program.</p>
+    </section>
+
+    <section id="outreach-awareness">
+      <h2><span class="icon">🌍</span>Outreach & Awareness</h2>
+      <p>We believe every woman deserves access to health education and care. Our outreach programs bring mobile health clinics, screenings for breast and cervical cancer, and hygiene awareness to rural and urban poor communities. We collaborate with local NGOs and government agencies to amplify impact.</p>
+    </section>
+  </main>
+
+  <button class="back-to-top" onclick="scrollTopWithFeedback()">↑</button>
+  
+
+<div id="footer-placeholder"></div>
+
+
+  <script>
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    function scrollTopWithFeedback() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (navigator.vibrate) {
+        navigator.vibrate(100);
+      }
+      const beep = new Audio('https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg');
+      beep.play().catch(() => {});
+    }
+  </script>
+    <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+  
+</body>
+</html>

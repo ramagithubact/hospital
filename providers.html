@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Providers - Just Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+    <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+  <!-- Providers Section -->
+  <section class="services-preview">
+    <div class="container">
+      <h2>Meet Our Providers</h2>
+      <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem;">
+        Our experienced team of medical professionals is here to provide you and your family with exceptional care.
+      </p>
+
+      <div class="service-grid">
+        <div class="service-item">
+          <img src="images/image1.jpg" alt="Dr. Asha Kumar" style="width:100%; border-radius: 12px;" />
+          <h3>Dr. xyz Kumar</h3>
+          <p>Pediatrician with 10+ years of experience in child wellness and development.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/image2.jpg" alt="Dr. Ravi Verma" style="width:100%; border-radius: 12px;" />
+          <h3>Dr. xyz Verma</h3>
+          <p>General Physician passionate about holistic family care and community health.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/image3.jpg" alt="Dr. Neha Shah" style="width:100%; border-radius: 12px;" />
+          <h3>Dr. xyz kumari</h3>
+          <p>Gynecologist focusing on women's wellness and reproductive health solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+ <div id="footer-placeholder"></div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+    <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+  
+
+</body>
+</html>

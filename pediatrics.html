@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pediatrics - Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+    <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+  <!-- Pediatrics Page Content -->
+ <!-- Pediatrics Page Content -->
+<section class="page-section pediatrics-section">
+  <div class="container">
+    <h1>Pediatrics</h1>
+    <p class="intro">
+      Our Pediatric department offers compassionate and expert care for newborns, infants, children, and adolescents. We focus on your child's health and development at every stage.
+    </p>
+
+    <h2>Our Pediatric Services</h2>
+    <ul class="service-list">
+  <li>🍼 Newborn & Infant Checkups</li>
+  <li>💉 Childhood Vaccinations</li>
+  <li>📈 Growth & Development Tracking</li>
+  <li>🤧 Common Illnesses: fever, colds, cough</li>
+  <li>🥦 Nutritional & Behavioral Guidance</li>
+</ul>
+
+
+    <h2>Why Choose Our Pediatric Care?</h2>
+   <ul class="service-list">
+  <li>👩‍⚕️ Friendly and experienced pediatricians</li>
+  <li>🎨 Kid-friendly environment</li>
+  <li>🗣️ Parental counseling and support</li>
+  <li>⏰ On-time vaccination reminders</li>
+  <li>❤️ Trusted by hundreds of families</li>
+</ul>
+
+
+    <h2>Appointment Timings</h2>
+    <p class="timings">
+      Monday to Saturday: <strong>10:00 AM – 1:00 PM</strong><br>
+      Sunday: <strong>Pediatrician on-call (prior appointment required)</strong>
+    </p>
+
+    <a href="contact.html" class="btn-pay-bill">👶 Book Pediatric Appointment</a>
+  </div>
+</section>
+
+<section class="related-doctors">
+  <h2>Meet Our Pediatricians</h2>
+  <div class="doctor-cards">
+    <div class="doctor-card">
+      <img src="images/doctor-child1.jpg" alt="Dr. Priya Das">
+      <h3>Dr. Priya Das</h3>
+      <p>MBBS, DCH</p>
+      <p>Over 12 years of experience treating infants and toddlers with patience and empathy.</p>
+    </div>
+    <div class="doctor-card">
+      <img src="images/doctor-child2.jpg" alt="Dr. Arun K.">
+      <h3>Dr. Arun K.</h3>
+      <p>MBBS, MD Pediatrics</p>
+      <p>Specialist in childhood vaccinations, growth monitoring, and child nutrition guidance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-parent">
+  <div class="container">
+    <h2>What Parents Say</h2>
+    <blockquote>
+      “Dr. Priya was wonderful with my 2-year-old. She explained everything patiently and even made my child smile during the checkup! Just Care Hospital truly lives up to its name.”
+      <footer>— S. Lakshmi, Dharmavaram</footer>
+    </blockquote>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<div id="footer-placeholder"></div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+    <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+  
+</body>
+</html>

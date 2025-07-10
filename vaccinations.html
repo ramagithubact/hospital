@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaccinations - Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+ <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+   <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+  <!-- Vaccinations Page Content -->
+<section class="page-section">
+
+    <div class="container">
+      <h1>Vaccinations</h1>
+      <p class="intro"style="max-width: 800px; font-size: 1.1rem;">
+        Vaccinations are a vital part of preventive healthcare. Care Hospital provides essential vaccines for children, adults, and senior citizens to protect against various diseases.
+      </p>
+
+      <h2>Vaccines We Offer</h2>
+      <ul class="service-list">
+        <li>Infant & Childhood Vaccinations</li>
+        <li>Seasonal Flu Shots</li>
+        <li>Covid-19 Vaccines (based on availability)</li>
+        <li>Tetanus, Typhoid, Hepatitis</li>
+        <li>Travel-related Vaccinations</li>
+      </ul>
+	  
+	  <section class="vaccination-schedule">
+  <h2>Recommended Vaccination Schedule</h2>
+  <div class="table-container">
+    <table class="vaccine-table">
+      <thead>
+        <tr>
+          <th>Age Group</th>
+          <th>Vaccines</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Birth</td>
+          <td>BCG, OPV-0, Hep B-1</td>
+          <td>At birth or within 24 hours</td>
+        </tr>
+        <tr>
+          <td>6 Weeks</td>
+          <td>DPT-1, IPV-1, Hib-1, Hep B-2, Rotavirus-1</td>
+          <td>First booster set</td>
+        </tr>
+        <tr>
+          <td>10 Weeks</td>
+          <td>DPT-2, IPV-2, Hib-2, Rotavirus-2</td>
+          <td>Follow-up dose</td>
+        </tr>
+        <tr>
+          <td>14 Weeks</td>
+          <td>DPT-3, IPV-3, Hib-3, Hep B-3, Rotavirus-3</td>
+          <td>Completes primary series</td>
+        </tr>
+        <tr>
+          <td>9–12 Months</td>
+          <td>MMR-1, Typhoid</td>
+          <td>Measles protection starts</td>
+        </tr>
+        <tr>
+          <td>16–24 Months</td>
+          <td>DPT-B1, IPV-B1, Hib-B1, MMR-2</td>
+          <td>Booster phase begins</td>
+        </tr>
+        <tr>
+          <td>5 Years</td>
+          <td>DPT-B2, IPV-B2</td>
+          <td>School-entry boosters</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="vaccine-booking">
+  <h2>Book Your Vaccination Appointment</h2>
+  <form action="https://formsubmit.co/youremail@example.com" method="POST" class="vaccine-form">
+    <input type="text" name="name" placeholder="Your Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <select name="vaccine-type" required>
+      <option value="">Select Vaccine Type</option>
+      <option value="BCG">BCG</option>
+      <option value="MMR">MMR</option>
+      <option value="DPT">DPT</option>
+      <option value="COVID-19">COVID-19</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Any health info or queries..."></textarea>
+    <button type="submit">📅 Submit Request</button>
+  </form>
+</section>
+
+<div class="calendar-button">
+  <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Vaccination+Appointment+at+Just+Care+Hospital&details=Select+your+slot+and+mention+vaccine+type&location=Just+Care+Hospital,+Dharmavaram" target="_blank" class="btn-pay-bill">
+    📆 Book via Google Calendar
+  </a>
+</div>
+
+
+
+
+      <h2>Why Get Vaccinated at Care Hospital?</h2>
+      <ul class="service-list">
+        <li>Cold storage and safe handling protocols</li>
+        <li>Consultation before and after vaccination</li>
+        <li>Follow-up reminders for next doses</li>
+        <li>Available on appointment to reduce wait time</li>
+        <li>Government-approved and certified vaccines</li>
+      </ul>
+<section class="vaccination-timings">
+  <h2><span class="icon">📅</span> Vaccination Timings</h2>
+  <p>
+    Monday to Saturday: <strong>9:30 AM – 12:30 PM</strong><br>
+    Sunday: <strong>Vaccination camp</strong> – 
+    <span id="next-sunday">Loading date…</span>
+  </p>
+</section>
+
+
+
+      <a href="contact.html" class="btn-pay-bill">💉 Schedule a Vaccination</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<div id="footer-placeholder"></div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+    <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+<script>
+  const vaccItems = document.querySelectorAll('.vaccinations-section h2, .vaccinations-section ul, .vaccinations-section p, .vaccinations-section .btn-pay-bill');
+
+  const vaccObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        vaccObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  vaccItems.forEach(el => {
+    el.classList.add('fade-init');
+    vaccObserver.observe(el);
+  });
+</script>
+
+<script>
+  function getNextSunday() {
+    const today = new Date();
+    const nextSunday = new Date();
+    nextSunday.setDate(today.getDate() + ((7 - today.getDay()) % 7 || 7));
+    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+    document.getElementById('next-sunday').textContent = nextSunday.toLocaleDateString('en-IN', options);
+  }
+
+  window.addEventListener('DOMContentLoaded', getNextSunday);
+</script>
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Just Care Hospital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+</head>
+<body>
+
+<!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📞 +91 98XX5 XXXXX</span>
+      <a href="contact.html">Make an Appointment</a>
+     
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+   <!-- Header & Navigation -->
+  <div id="header-placeholder"></div>
+
+ <!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-heading">📬 Contact Us</h2>
+    <p class="contact-intro">
+      We're here to help! Reach out with any questions, concerns, or to book your appointment.
+    </p>
+
+    <div class="contact-box">
+      <div class="contact-details">
+        <p><strong>📍 Address:</strong> 123 Health Street, Dharmavaram</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong> <a href="mailto:contact@justcarehospital.com">contact@justcarehospital.com</a></p>
+      </div>
+
+      <form action="https://formsubmit.co/ramakanthckp@gmail.com" method="POST" class="contact-form" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+ <div id="footer-placeholder"></div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+  <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
